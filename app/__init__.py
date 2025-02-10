@@ -1,5 +1,5 @@
 import os
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, request
 import logging
 from logging.handlers import RotatingFileHandler
 from dotenv import load_dotenv
@@ -95,7 +95,7 @@ def create_app(test_config=None):
     # Error handlers
     @app.errorhandler(404)
     def not_found_error(error):
-        app.logger.error(f'Page not found: {error}')
+        app.logger.error(f'Page not found: {request.url}')
         return {'error': 'Page not found'}, 404
 
     @app.errorhandler(500)
