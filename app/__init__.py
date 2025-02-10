@@ -74,7 +74,6 @@ def create_app(test_config=None):
     app.logger.info('Current environment: %s', env)
     app.logger.info('Debug mode: %s', debug_mode)
     app.logger.info('Log level: %s', logging.getLevelName(log_level))
-    app.logger.info('Log format: %s', log_format)
     
     # Context processor for templates
     @app.context_processor

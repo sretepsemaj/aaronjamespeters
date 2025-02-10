@@ -28,3 +28,4 @@ class DevelopmentConfig(Config):
     
     def __init__(self):
         print("Loading DevelopmentConfig")
+

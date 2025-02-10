@@ -45,7 +45,7 @@ class Config:
     
     # Basic Flask config
     SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-secret-key-please-change-in-production')
-    FLASK_APP = os.environ.get('FLASK_APP', 'run.py')
+    FLASK_APP = os.environ.get('FLASK_APP', 'app.py')
     FLASK_ENV = os.environ.get('FLASK_ENV', 'development')
     DEBUG = os.environ.get('FLASK_DEBUG', '1') == '1'
     
@@ -116,7 +116,8 @@ class Config:
         }
         
         # Get environment, defaulting to production for safety
-        flask_env = os.getenv('FLASK_ENV', 'production')
+        flask_env = os.getenv('FLASK_ENV', 'production').lower().strip()
+        logger.debug(f"FLASK_ENV value: '{flask_env}'")
         
         # Return appropriate config class
         return configs.get(flask_env, ProductionConfig)
