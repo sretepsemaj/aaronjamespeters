@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - Aaron James Peters</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Base styles */
+        :root {
+            --primary-color: #212529;
+            --secondary-color: #6c757d;
+            --accent-color: #0d6efd;
+            --background-color: #ffffff;
+            --text-color: #212529;
+            --navbar-height: 56px;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        main {
+            flex: 1;
+            padding-bottom: 60px; /* Space for footer */
+        }
+
+        /* Navigation styles */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.4rem;
+            font-weight: 600;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 0.8rem 1rem !important;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link.active {
+            font-weight: 600;
+            color: white !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 80%;
+        }
+
+        /* Mobile navigation */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background-color: var(--primary-color);
+                padding: 1rem;
+                border-radius: 0.5rem;
+                margin-top: 0.5rem;
+            }
+
+            .nav-link {
+                padding: 1rem !important;
+                border-radius: 0.25rem;
+            }
+
+            .nav-link:active {
+                background-color: rgba(255,255,255,0.1);
+            }
+
+            .navbar-toggler {
+                border: none;
+                padding: 0.75rem;
+                margin-right: -0.75rem;
+            }
+
+            .navbar-toggler:focus {
+                box-shadow: none;
+            }
+
+            .navbar-toggler-icon {
+                width: 1.5em;
+                height: 1.5em;
+            }
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 1rem 0;
+            margin-top: auto;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+        }
+
+        /* Touch-friendly improvements */
+        @media (hover: none) {
+            .nav-link:active {
+                opacity: 0.7;
+            }
+
+            /* Larger touch targets on mobile */
+            .nav-link {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+
+            /* Remove hover effects on mobile */
+            .nav-link:hover::after {
+                width: 0;
+            }
+
+            /* Active state for touch devices */
+            .nav-link.active::after {
+                width: 100%;
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Prevent content shift when scrollbar appears */
+        html {
+            scrollbar-gutter: stable;
+        }
+
+        /* Loading state */
+        .page-loading {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .page-loaded {
+            opacity: 1;
+        }
+
+        /* Safe area support for modern devices */
+        @supports(padding: max(0px)) {
+            body {
+                padding-left: min(0vmin, env(safe-area-inset-left));
+                padding-right: min(0vmin, env(safe-area-inset-right));
+                padding-bottom: min(0vmin, env(safe-area-inset-bottom));
+            }
+        }
+    </style>
+</head>
+<body class="page-loading">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Aaron James Peters</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('bio.index') }}">
+                            <i class="fas fa-user me-2 d-lg-none"></i>Bio
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('resume.index') }}">
+                            <i class="fas fa-file-alt me-2 d-lg-none"></i>Resume
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('projects.index') }}">
+                            <i class="fas fa-code me-2 d-lg-none"></i>Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('youtube.index') }}">
+                            <i class="fab fa-youtube me-2 d-lg-none"></i>YouTube
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer mt-auto py-3">
+        <div class="container text-center">
+            <span class="text-muted">&copy; {{ now.year }} Aaron James Peters. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Add active class to current nav item
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+            
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPath) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Handle mobile navigation
+            const navbar = document.querySelector('.navbar-collapse');
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInside = navbar.contains(event.target) || navbarToggler.contains(event.target);
+                if (!isClickInside && navbar.classList.contains('show')) {
+                    bootstrap.Collapse.getInstance(navbar).hide();
+                }
+            });
+
+            // Close mobile menu after clicking a link
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (navbar.classList.contains('show')) {
+                        bootstrap.Collapse.getInstance(navbar).hide();
+                    }
+                });
+            });
+
+            // Add page loaded class
+            document.body.classList.add('page-loaded');
+        });
+
+        // Handle back/forward navigation
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                document.body.classList.add('page-loaded');
+            }
+        });
+
+        // Smooth scroll to top
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

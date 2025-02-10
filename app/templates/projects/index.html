@@ -1,0 +1,141 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="projects-section">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">GitHub Projects Overview</h1>
+        <div class="row">
+
+            <!-- aaronjamespets -->
+            <div class="col-12 mb-5">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-content">
+                        <h2>aaronjamespeters</h2>
+                        <p>Building this Flask app for my profile page and application process was a valuable learning experience that significantly expanded my knowledge for future projects. I started with the basics and ended up creating a modern, responsive web app using Flask and Bootstrap. Along the way, I figured out how to load bio and resume content from text files, making updates easy without touching the code. I learned to use Bootstrap buttons and FontAwesome for navigation and added AOS for smooth scroll animations. Each section—Bio, Resume, Projects, and YouTube—taught me something new, from styling pages to organizing the code with Blueprints to keep it modular and scalable using best practices. I ran into plenty of challenges, especially with formatting and getting the YouTube page working, but every fix became an opportunity to learn and improve. By the end, I had a fully functional app that’s clean, responsive, and ready for both desktop and mobile.</p>
+                        <a href="https://github.com/sretepsemaj/aaronjamespeters.git" class="btn btn-primary mt-3" target="_blank">GitHub</a>
+                        <a href="https://aaronjamespeters.onrender.com" class="btn btn-secondary mt-3" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OG1-0 Project -->
+            <div class="col-12 mb-5">
+                <div class="project-card" data-aos="fade-up">
+                    <div class="project-content">
+                        <h2>OG1-0</h2>
+                        <p>This project was created as a return to the basics in a simple python Flask project to truly understand the relationship between .env files for development, production, and staging, and how they interact with base.py, dev.py, and prod.py configuration files.</p>
+                        <a href="https://github.com/sretepsemaj/og1-0.git" class="btn btn-primary mt-3" target="_blank">GitHub</a>
+                        <a href="https://og1-0.onrender.com" class="btn btn-secondary mt-3" target="_blank">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BuildingCodeAI Project -->
+            <div class="col-12 mb-5">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-content">
+                        <h2>BuildingCodeAI</h2>
+                        <p>This was one of my latest projects, built using Windurf Code Editor with setup guidance from OpenAI. Through this project, I gained valuable insights into Django admin, user logins, and a much deeper understanding of folder structures and media management.</p>
+                        <a href="https://github.com/sretepsemaj/BuildingCodeAI.git" class="btn btn-primary mt-3" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NEWSai Project -->
+            <div class="col-12 mb-5">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-content">
+                        <h2>NEWSai</h2>
+                        <p>This project also needs a complete rebuild now that I'm more proficient in Django. NEWSai was an exciting project that helped me truly grasp Git's purpose and version control.</p>
+                        <a href="https://github.com/sretepsemaj/NEWSai.git" class="btn btn-primary mt-3" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PlumbingINC Project -->
+            <div class="col-12 mb-5">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-content">
+                        <h2>PlumbingINC</h2>
+                        <p>Unfortunately, this project no longer exists on GitHub or AWS due to an unexpected deletion. Although the loss was frustrating—especially after dealing with AWS's high fees—I walked away with a limited but important understanding of EC2, VPC configuration, and how to manage AWS resources effectively.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.project-card {
+    background: var(--card-bg-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-content h2 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+}
+
+.project-content p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .project-card {
+        background-color: #2d2d2d;
+    }
+
+    .project-content h2 {
+        color: #e0e0e0;
+    }
+
+    .project-content p {
+        color: #b0b0b0;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .project-content {
+        padding: 1.5rem;
+    }
+
+    .project-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-content p {
+        font-size: 1rem;
+    }
+}
+</style>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    });
+</script>
+{% endblock %}

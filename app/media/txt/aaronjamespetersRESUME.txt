@@ -1,0 +1,78 @@
+Aaron Peters
+
+46 Chaparral Dr.
+Santa Fe, NM, 87508
+Email: sretepsemaj.1@gmail.com | Phone: 838-202-2917 | LinkedIn: @sretepsemaj
+
+PROFESSIONAL SUMMARY
+
+I'm a highly self-motivated programmer who works well in collaborative team environments and I am passionate about creating scalable, user-centric solutions that drive business growth. I have been doing projects in Full-Stack environments, building dynamic web applications and implementing AI-driven web application functionalities. Im Proficient in Python frameworks (Flask, Django) and JavaScript, I'm learning a basic foundation in Java and object-oriented programming. I have had some success in deploying applications on AWS and Render platforms and fairly adept at database management, cloud infrastructure, and AI code editing system. Would welcome any opportunity to grow my knowledge and build systems that impact our future for the positive.
+
+TECHNICAL SKILLS
+
+-Programming Languages: Java (OOP), Python (Flask, Django), JavaScript (ES6+), HTML5, CSS3
+
+-Frameworks & Libraries: Flask, Django, Jinja2, Bootstrap, RESTful APIs
+
+-Database Management: MySQL, PostgreSQL
+
+-AI Development: OpenAPI/GroqAPI/PerplexityAPI integration, RAG (Retrieval-Augmented Generation), semantic search and embedding.
+
+-Web Hosting & Deployment: Render.com, AWS (EC2, VPC), Hostinger, Gunicorn, Nginx, SSL Setup
+
+-Tools & Platforms: Git, GitHub, VSCode, Windsurf, Cursor
+
+-Additional Skills: Debugging, Code Refactoring, Log Management, Custom UI/UX Design
+
+PROFESSIONAL EXPERIENCE
+
+-Web application projects | June 2024 – Present
+
+BuildingCodeAI: Developed a web application using Django and Flask frameworks, incorporating admin and user login functionalities for the NYC plumbing code. Integrated OpenAI GPT APIs to perform local embeddings for semantic search, enabling efficient retrieval of information from linked .jpg and .json files stored in a MySQL database. Designed custom UI/UX interfaces with responsive layouts and consistent branding to enhance user experience.
+PlumbingINC: Deployed a mock plumbing website on AWS EC2 with a Virtual Private Cloud (VPC), utilizing Gunicorn and Nginx to ensure secure performance and SSL encryption.
+NewsAI: Built a local website that fetched news articles from a News API on specific subjects. Employed the Groq API to rewrite these articles, generating scripts that were then displayed on a teleprompter for an OpenAI model to present to the public.
+
+-Plumber's Assistant| NYC Plumbing Co. | NY | 2019 – 2022
+
+Assisted with customer calls and relations. Performed installations, maintenance, and repairs for water, waste, and gas systems. Installed and repaired kitchen, bathroom, and laundry fixtures, vents, and water heaters. Conducted gas pressure testing and ensured compliance with safety standards.
+
+-Owner | Anytime Plumbing | CA | 2013 – 2019
+
+Managed all aspects of the plumbing business, including customer service, scheduling, and operations. Performed installations, maintenance, and repairs for water, waste, and gas systems. Installed and repaired kitchen, bathroom, and laundry fixtures, vents, and water heaters. Conducted gas pressure testing and ensured compliance with safety standards.
+
+-Plumber's Apprentice | Steve Parsons Plumbing | CA | May 2011 – June 2013
+
+Assisted in clog removal, pipe cleaning, and installation of water, waste, and gas systems. Gained hands-on experience with plumbing fixtures, water heaters, and vent systems.
+
+-Superintendent Motel 6 | CA | July 2008 - 2010
+
+Fixing anything that might not need a professional contractor. From door to toilet, to light switches and bed frames. Pretty much anything a room might need repaired after a guest left the hotel. 
+
+-Store Manager | San Diego Hydroponics & Organics | CA | Aug 2006 – July 2008
+
+Oversaw store operations, including inventory management, ordering, and customer service. Trained staff on sales techniques, product knowledge, and inventory organization. Conducted quarterly cycle counts and managed returns and repairs.
+
+-Sales Manager | Blossom Valley Farms | CA | May 2004 – Aug 2005
+
+Established and maintained client relationships, driving sales and customer satisfaction. Supervised sales assistants and delivery drivers, ensuring efficient operations. Managed inventory, seeding, and propagation processes. Awarded Employee of the Month for outstanding performance in February 2005.
+
+-Assistant Manager | Evergreen Nursery | CA | April 2003 – May 2004
+
+Managed inventory, including dry goods and color stock, ensuring accurate ordering and organization. Provided customer service and sales support for nursery products. Supervised staff and operated tractors and forklifts safely.
+
+EDUCATION
+
+Advanced Programming and Data Structures | Santa Fe Community College, Santa Fe, NM | In Progress
+Currently deepening understanding of Java and Object-Oriented Programming. Inheritance, Polymorphism, Abstraction and Encapsulation, all these concepts are part of the curriculum.
+GPA: 94%
+Associate of Science in Nursery Technologies and Landscape Technologies | Cuyamaca College, El Cajon, CA | June 2006
+GPA: 3.10 / 4.00
+International High School Diploma | Frankfurt International School, Frankfurt, Germany
+
+EXTRA SKILLS
+
+Languages: Fluent in German (written and spoken), Basic Spanish (spoken and understood)
+
+Software: Excel, Word, Outlook Express, Quicken, Adobe Illustrator, Adobe Photoshop, Retail Edge, xTuple
+
+Hobbies: Gardening, growing heirloom tomatoes, lettuce, and culinary herbs and now love programming and fascinated with AI integration.
