@@ -1,0 +1,8 @@
+# Mark Python files as the primary language
+*.py linguist-language=Python
+*.html linguist-vendored
+*.css linguist-vendored
+*.js linguist-vendored
+
+# Treat templates as documentation
+app/templates/* linguist-documentation
