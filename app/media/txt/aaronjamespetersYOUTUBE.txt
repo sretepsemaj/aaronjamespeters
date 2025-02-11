@@ -55,64 +55,62 @@ In this video, I waited way too long to initialize Git, so it’s time to fix th
 
 WINDSURF - Making a FLASK APP EASY!!! - Add the Projects and YouTube buttons to home (VIDEO 10)
 
-
+https://youtu.be/WAwTQDMVD7U
 
 In this video, I add Projects and YouTube buttons to the app to better showcase my skills. I decided to use Flask Blueprints to keep things professional. While I could’ve stuck with a single routes.py, breaking the logic into separate files using Blueprints makes the code much easier to navigate. It also simplifies debugging and updating the relationships between templates and endpoints. Definitely worth the extra effort!
 
 WINDSURF - Making a FLASK APP EASY!!! Quick git commit & MAJOR HOME PAGE BUTTONS DEBUG (VIDEO 11)
 
-
+https://youtu.be/P_MGzQJflQk
 
 In this video, I do a quick commit and set up the Blueprint folder. Although I didn’t get the app fully working at first, I realized off-camera that each Blueprint needs its own folder in the templates directory. Since it’s my first time using Blueprints for script communication, there was definitely a learning curve. Thankfully, with the help of WINDSURF editor and Cassi (Codeium AI), we worked through it together. I’ll explain how it all comes together in the next video!
 
 WINDSURF - Making a FLASK APP EASY!!! Final Home Buttons FIX (VIDEO 12)
 
-
+https://youtu.be/m8ZRPhrVzy8
 
 In this video, I troubleshoot the templates folder setup. I had to create a separate folder for each Blueprint in the templates directory to render individual index.html files. This ensures that each endpoint has its own dedicated page, keeping everything organized and working as expected.
 
 WINDSURF - Making a FLASK APP EASY!!! Git commit & Logs BROKE had to debug them (VIDEO 13)
 
-
+https://youtu.be/8vKqv_uPbEY
 
 In this video, I do a quick Git commit and then notice my logs have stopped working. Logs are essential—especially when using an AI code editor like WINDSURF or any other tool. While you can rely on the terminal in local development, once the app is deployed, there’s no terminal access. Having info.log and error.log functioning correctly is crucial for tracking issues. It took some time to fix, but I made sure the terminal now displays the current environment so I don’t accidentally work in the wrong one.
 
 WINDSURF - Making a FLASK APP EASY!!! STARTING TO ACTUALLY BUILD!!! (VIDEO 14)
 
-
+https://youtu.be/K_ND3X8UmAg
 
 In this video, I start building the resume endpoint and make another Git commit. To help Cassi (Codeium AI) understand the structure of my resume, I used all caps for section headers and added a - before any lines I wanted it to render as bold. Sometimes, you have to get creative to communicate effectively with AI. WINDSURF continues to impress—truly an amazing tool for coding and collaboration!
 
 WINDSURF - Making a FLASK APP EASY!!! Building the Resume index.html!!! (VIDEO 15)
 
-
+https://youtu.be/DiLpe6QF_nY
 
 In this video, I focus on getting Cassi (Codeium AI) to properly recognize the resume headers and bold lines. As I mentioned in the previous video, I capitalized the headers and added a - in front of the lines I wanted bold. Unfortunately, that step didn’t make it into this video—apologies for the confusion! It’s all about trial and error to find the best way to communicate with the AI.
 
 WINDSURF - Making a FLASK APP EASY!!! Excluding the media folder from tracking (VIDEO 16)
 
-
+https://youtu.be/-1htFTLAbWs
 
 In this video, I do some debugging for the media folder, adding .gitignore and .gitkeep to manage which files get tracked. I run into a few issues switching between my dev and main branches in Git. I fixed some of those off-camera to keep the video shorter, but one key tip: when moving between dev and main, it’s crucial not to track the media folder.
 EXTRA INFO: I reveal how I styled the resume page in the comment section of the last video description! Be sure to check that out.
 
-
-
 WINDSURF - Making a FLASK APP EASY!!! Making better terminal logs on app start up (VIDEO 17)
 
-
+https://youtu.be/1SOHMHvynXI
 
 In this video, I create a main.py file in the Blueprints folder to display environment logs at startup. This helps ensure the environment is set up correctly. For this app, it’s not critical since I’m only switching between dev.py and prod.py, but for more advanced apps with additional environments like staging and testing, it’s super helpful to see how the logs are running in each environment. This setup makes managing environments much easier!
 
 WINDSURF - Making a FLASK APP EASY!!! Building the bio page finally! (VIDEO 18)
 
-
+https://youtu.be/JSgrWpupwA8
 
 In this video, I add the bio text from the media folder to the bio page/endpoint. It’s a pretty straightforward process. Next, I plan to add an image from the media/images folder to enhance the page. Stay tuned for that update!
 
 WINDSURF - Making a FLASK APP EASY!!! Building the bio page finally! (VIDEO 19)
 
-
+https://youtu.be/j_lP9uq94oo
 
 In this video, I add the project details and GitHub links to the projects page/endpoint. I also include a live demo link for the last Flask app. It’s a pretty straightforward process, tying everything together to showcase the work effectively.
 
