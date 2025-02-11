@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block head %}
+<link href="{{ url_for('static', filename='css/projects.css') }}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
 <div class="projects-section">
     <div class="container mt-5">
@@ -16,8 +20,10 @@
                         <p>Along the way, I learned how to load bio and resume content from text files, making updates easy without touching the code. I got more comfortable with using Bootstrap buttons and FontAwesome for navigation and added AOS for smooth scroll animations to enhance the user experience. Each section—Bio, Resume, Projects, and YouTube—taught me something new, from styling pages to organizing code with Blueprints to keep everything modular and scalable using best practices. I hit plenty of challenges, especially with formatting and getting the YouTube page to work properly (w/ thumbnails no less!), but every fix became an opportunity to learn and improve. Honestly, I enjoy the process of troubleshooting—there’s nothing like the reward of seeing everything work after some solid problem-solving.</p>
                         
                         <p>By the end, I had a fully functional app that’s clean, responsive, and ready for both desktop and mobile. There are still a few tweaks I want to make before redeploying, but the server is running the code successfully—and that feels pretty great!</p>
-                        <a href="https://github.com/sretepsemaj/aaronjamespeters.git" class="btn btn-primary mt-3" target="_blank">GitHub</a>
-                        <a href="https://aaronjamespeters.onrender.com" class="btn btn-secondary mt-3" target="_blank">Live Demo</a>
+                        <div class="project-buttons">
+                            <a href="https://github.com/sretepsemaj/aaronjamespeters.git" class="btn btn-primary mt-3" target="_blank">GitHub</a>
+                            <a href="https://aaronjamespeters.onrender.com" class="btn btn-secondary mt-3" target="_blank">Live Demo</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -32,8 +38,10 @@
                         <p>One of the key lessons was setting up a robust logging system. I implemented rotating file handlers, introduced a trace ID for easier log tracking, and configured different log levels—debug, info, and error—to monitor the app's performance across environments. For the database, I configured SQLAlchemy and set up a basic model structure. The project supported PostgreSQL, giving me hands-on experience with database connections and integrating them into a Flask project. Deployment was another important learning opportunity. I configured the app for deployment on Render.com, creating a Procfile and managing dependencies through a requirements.txt file, which made the process much simpler and gave me a solid understanding of how to get a Flask app running in the cloud.</p>
 
                         <p>Finally, I set up a basic test structure using pytest, organizing the test directory and writing simple tests to ensure the core functionality of the app worked as expected. It reinforced the importance of testing, even in smaller projects. By returning to the fundamentals, I gained a deeper understanding of how all these pieces fit together—knowledge that will help me build more scalable, secure, and maintainable projects in the future.</p>
-                        <a href="https://github.com/sretepsemaj/og1-0.git" class="btn btn-primary mt-3" target="_blank">GitHub</a>
-                        <a href="https://og1-0.onrender.com" class="btn btn-secondary mt-3" target="_blank">Live Demo</a>
+                        <div class="project-buttons">
+                            <a href="https://github.com/sretepsemaj/og1-0.git" class="btn btn-primary mt-3" target="_blank">GitHub</a>
+                            <a href="https://og1-0.onrender.com" class="btn btn-secondary mt-3" target="_blank">Live Demo</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -54,7 +62,9 @@
                         <p>For the database, I used SQLite (db.sqlite3), with migrations in place to keep everything up to date. The frontend is template-based, with organized static files, custom forms, and responsive design. Utility functions are grouped in a dedicated utils directory, and I created custom management commands for greater control. The environment switching script (switch_env.sh) and activation script (activate.sh) made it easy to switch between environments.</p>
 
                         <p>Security was a key focus, with proper media file handling, secure access control, and environment variable management for sensitive data. The project adheres to high standards, with a clear Code of Conduct, licensing information, and development setup scripts, along with thorough documentation to ensure maintainability and scalability.</p>
-                        <a href="https://github.com/sretepsemaj/BuildingCodeAI.git" class="btn btn-primary mt-3" target="_blank">GitHub</a>
+                        <div class="project-buttons">
+                            <a href="https://github.com/sretepsemaj/BuildingCodeAI.git" class="btn btn-primary mt-3" target="_blank">GitHub</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -73,7 +83,9 @@
                         <p>Security was a top priority throughout the project. I used environment variables for secure API key handling and implemented comprehensive error handling and logging to track issues. The logging system provided user-friendly error messages, which made troubleshooting easier. Managing different environments was another significant aspect, with virtual environments (venv) and environment-specific configuration using .env files to ensure smooth development and deployment.</p>
 
                         <p>Each step of the project reinforced the importance of clean code and modular structure. Separating concerns across different apps and documenting functions helped keep the code maintainable and scalable. This project pushed me to apply everything I’ve learned—balancing functionality, security, and performance in a professional Django web application. I’m excited to continue improving it and believe it has real potential to make a difference.</p>
-                        <a href="https://github.com/sretepsemaj/NEWSai.git" class="btn btn-primary mt-3" target="_blank">GitHub</a>
+                        <div class="project-buttons">
+                            <a href="https://github.com/sretepsemaj/NEWSai.git" class="btn btn-primary mt-3" target="_blank">GitHub</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -92,69 +104,6 @@
         </div>
     </div>
 </div>
-
-<style>
-.project-card {
-    background: var(--card-bg-color);
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 100%;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.project-content {
-    padding: 2rem;
-}
-
-.project-content h2 {
-    color: var(--heading-color);
-    margin-bottom: 1rem;
-    font-size: 1.75rem;
-}
-
-.project-content p {
-    color: var(--text-color);
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-    .project-card {
-        background-color: #2d2d2d;
-    }
-
-    .project-content h2 {
-        color: #e0e0e0;
-    }
-
-    .project-content p {
-        color: #b0b0b0;
-    }
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .project-content {
-        padding: 1.5rem;
-    }
-
-    .project-content h2 {
-        font-size: 1.5rem;
-    }
-
-    .project-content p {
-        font-size: 1rem;
-    }
-}
-</style>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

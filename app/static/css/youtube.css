@@ -1,0 +1,209 @@
+/* YouTube page specific styles */
+:root {
+    --youtube-text-color: #212529;
+    --youtube-heading-color: #212529;
+    --youtube-bg-color: #ffffff;
+    --youtube-card-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --youtube-card-hover-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Main section styles */
+.youtube-section {
+    padding: 2rem 1rem;
+    background-color: var(--youtube-bg-color);
+}
+
+.youtube-section h1 {
+    color: var(--youtube-heading-color);
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.youtube-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* List layout */
+.youtube-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Card styles */
+.youtube-card {
+    background: var(--youtube-bg-color);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: var(--youtube-card-shadow);
+    display: flex;
+    flex-direction: row;
+}
+
+.youtube-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--youtube-card-hover-shadow);
+}
+
+/* Thumbnail styles */
+.youtube-thumbnail-container {
+    width: 200px !important;
+    min-width: 200px !important;
+    max-width: 200px !important;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.youtube-thumbnail-link {
+    display: block;
+    width: 200px !important;
+    height: 200px !important;
+    overflow: hidden;
+}
+
+.youtube-thumbnail {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.youtube-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+/* Card content */
+.youtube-card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+.youtube-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    color: var(--youtube-heading-color);
+    line-height: 1.4;
+    text-decoration: none;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.youtube-title:hover {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Description styles */
+.youtube-description {
+    font-size: 0.9rem;
+    color: var(--youtube-text-color);
+    opacity: 0.8;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    line-height: 1.5;
+    margin: 0 0 0.75rem 0;
+    white-space: pre-line;
+    text-indent: 0;
+    padding: 0;
+}
+
+.youtube-description.collapsed {
+    max-height: 6em;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.youtube-description:not(.collapsed) {
+    max-height: none;
+    white-space: pre-line;
+}
+
+/* Button styles */
+.youtube-toggle-btn {
+    background: none;
+    border: none;
+    color: #007bff;
+    padding: 0.25rem 0;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-top: auto;
+    text-align: left;
+    width: fit-content;
+}
+
+.youtube-toggle-btn:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+/* Loading state */
+.spinner-border {
+    margin: 2rem auto;
+    display: block;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .youtube-section {
+        padding: 1rem;
+    }
+    
+    .youtube-section h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .youtube-list {
+        gap: 1rem;
+    }
+    
+    .youtube-thumbnail-container {
+        width: 160px !important;
+        min-width: 160px !important;
+        max-width: 160px !important;
+    }
+    
+    .youtube-thumbnail-link {
+        width: 160px !important;
+        height: 160px !important;
+    }
+    
+    .youtube-thumbnail {
+        width: 160px !important;
+        height: 160px !important;
+    }
+    
+    .youtube-card-body {
+        padding: 0.75rem;
+    }
+    
+    .youtube-title {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .youtube-description {
+        font-size: 0.8rem;
+        line-height: 1.4;
+    }
+    
+    .youtube-description.collapsed {
+        max-height: 4.2em;
+    }
+    
+    .youtube-toggle-btn {
+        font-size: 0.8rem;
+    }
+}

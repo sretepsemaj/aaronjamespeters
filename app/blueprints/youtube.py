@@ -58,7 +58,20 @@ def get_videos():
             {
                 'url': 'https://youtu.be/9Isksd9Xhqc',
                 'title': 'WINDSURF - Making a FLASK APP EASY!!! - Initial Folder Structure and SETUP (VIDEO 1)',
-                'description': '''Doing the first initial folder structure explanation and how to set up an easy PYTHON Flask app with WINDSURF code editor and codium AI or as I like to call it Cassi. This video starts the project of me setting up a work application demo page that I will use to apply to jobs. This is a series of videos where you can follow along to make your own app I'm going to demonstrate all the important things to consider when building a PYTHON Flask app.'''
+                'description': '''Introduction:
+By the end of this video, you'll have a resume site that looks like this aaronjamespeters.onrender.com or you can change it, the code is also in my git, if youd like to just use that. This is a complete build, covering almost every step of problem-solving and debugging. Some of the more time-consuming debugging was shortened for the sake of the video, but I always explain how I fixed the issues. This is my first video series—there are more builds to come, and as I get better at making these, I hope you'll be able to build some awesome projects, too.
+
+It's time we take back the tech industry and build entirely new AI driven OS systems/social sites from the ground up, not just patch the old ones. With AI tools like WINDSURF (and trust me, I've tried them all—WINDSURF is especially awesome!), we can create things that big companies—X, Insta, Apple, you name it—would love to stop, but we can steal users one by one. We have to start building before they notice, or they will stop us. Learning how to use AI coding tools like WINDSURF is crucial for the future.
+
+This is about reclaiming tech, redistributing power, and showing how much better life can be without everything locked up in the hands of the 1%. There's an abundance of resources—we just don't distribute them fairly. The hoarders of wealth and power seem content to let the rest of us suffer under their greed. But really, how much does one person need to be truly happy? Isn't a good life about having great family and friends by your side?
+
+I'm not here to show half the process and pretend it works—I'm giving you the full picture. This video starts with an explanation of the initial folder structure and how to set up a basic Python Flask app using WINDSURF, Cascade (the AI platform and my name for the AI Cassi), Codeium (the AI assistant), and WINDSURF (the code editor). This series of videos will walk you through building a work application demo page that I'm using to apply for jobs. Follow along, and I'll show you everything you need to know about setting up your own Python Flask app—from key considerations to all the essential steps.
+
+In this first video, I go over the folder structure that I pre-made with OpenAI. For this simple app—or any app—it's really helpful to predesign the folders and basic scripts you'll need to render everything in the browser. Laying that foundation makes things much easier down the line. AI tools can generate scripts, but when those scripts are linked to others, there's always a chance it will accidentally break features you've already set up. While anything can be fixed if you ask the right questions (Best practices usually), you can easily get stuck in loops and waste tokens. For the planet's sake, it's best to avoid that whenever possible.
+
+As I get better at this, I'll move on to more complex projects—some of which I've already built but plan to rebuild. I haven't been coding for long, but the learning curve I've experienced with AI code editing tools like WINDSURF has been unparalleled. I already have two projects in mind, both built with Django. Stay tuned!
+
+My name is Aaron James Peters and thank you for watching.'''.strip(),
             },
             {
                 'url': 'https://youtu.be/Z1PDkh7eLss',
