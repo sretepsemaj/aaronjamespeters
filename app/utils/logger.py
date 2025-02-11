@@ -23,15 +23,22 @@ def setup_logger(app):
     log_dir = Path(app.config['LOG_DIR'])
     log_dir.mkdir(exist_ok=True)
     
-    # Remove any existing handlers to prevent duplicates
-    if app.logger.handlers:
-        app.logger.handlers.clear()
+    # Remove all existing handlers from both app.logger and root logger
+    app.logger.handlers.clear()
+    logging.getLogger().handlers.clear()
     
     # Get the log configurations based on environment
     log_configs = app.config.get('LOG_FILE_CONFIGS', {})
     
     # Check if we're in development environment
     is_development = app.config['FLASK_ENV'] == 'development'
+    
+    # Add console handler first
+    console_handler = logging.StreamHandler()
+    console_formatter = logging.Formatter('%(message)s')  # Simpler format for console
+    console_handler.setFormatter(console_formatter)
+    console_handler.setLevel(logging.INFO)
+    app.logger.addHandler(console_handler)
     
     # Set up handlers for each log file
     for log_type, config in log_configs.items():
@@ -53,8 +60,11 @@ def setup_logger(app):
         formatter = logging.Formatter(config['format'])
         handler.setFormatter(formatter)
         
-        # Add handler to app logger
+        # Add handler to app logger only
         app.logger.addHandler(handler)
     
     # Set the base logging level from config
     app.logger.setLevel(getattr(logging, app.config['LOG_LEVEL'].upper()))
+    
+    # Prevent Flask's default handlers from duplicating logs
+    app.logger.propagate = False
