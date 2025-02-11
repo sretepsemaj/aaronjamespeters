@@ -4,6 +4,7 @@ import logging
 from logging.handlers import RotatingFileHandler
 from dotenv import load_dotenv
 from datetime import datetime
+from pathlib import Path
 
 def create_app(test_config=None):
     # Load environment variables from .env file
@@ -11,6 +12,15 @@ def create_app(test_config=None):
     
     # Create Flask app instance
     app = Flask(__name__, instance_relative_config=True)
+    
+    # Clear log files at startup
+    log_dir = Path(app.root_path).parent / 'logs'
+    if log_dir.exists():
+        for log_file in log_dir.glob('*.log'):
+            try:
+                log_file.write_text('')  # Clear the file contents
+            except Exception as e:
+                print(f"Error clearing log file {log_file}: {e}")
     
     # Determine environment
     env = os.getenv('FLASK_ENV', 'development')
@@ -21,6 +31,28 @@ def create_app(test_config=None):
         app.config.from_mapping(
             SECRET_KEY=os.getenv('SECRET_KEY', 'dev'),
             DATABASE=os.path.join(app.instance_path, 'app.sqlite'),
+            FLASK_ENV=env,
+            LOG_DIR=str(log_dir),
+            LOG_LEVEL='DEBUG' if debug_mode else 'INFO',
+            LOG_MAX_BYTES=10 * 1024 * 1024,  # 10MB
+            LOG_BACKUP_COUNT=3,
+            LOG_FILE_CONFIGS={
+                'debug': {
+                    'filename': 'debug.log',
+                    'level': 'DEBUG',
+                    'format': '%(asctime)s %(levelname)s [%(filename)s:%(lineno)d]: %(message)s'
+                },
+                'info': {
+                    'filename': 'info.log',
+                    'level': 'INFO',
+                    'format': '%(asctime)s %(levelname)s [%(filename)s:%(lineno)d]: %(message)s'
+                },
+                'error': {
+                    'filename': 'error.log',
+                    'level': 'ERROR',
+                    'format': '%(asctime)s %(levelname)s [%(filename)s:%(lineno)d]: %(message)s'
+                }
+            }
         )
     else:
         app.config.update(test_config)
@@ -30,50 +62,15 @@ def create_app(test_config=None):
         os.makedirs(app.instance_path)
     except OSError:
         pass
-        
-    # Configure logging
-    log_level = logging.DEBUG if debug_mode else logging.INFO
-    log_format = '%(asctime)s %(levelname)s [%(filename)s:%(lineno)d]: %(message)s'
-    formatter = logging.Formatter(log_format)
+
+    # Import and setup logger
+    from .utils.logger import setup_logger
+    setup_logger(app)
     
-    # Configure console handler
-    console_handler = logging.StreamHandler()
-    console_handler.setFormatter(formatter)
-    console_handler.setLevel(log_level)
-    
-    # Configure file handlers for different log levels
-    log_dir = os.path.join(os.path.dirname(app.root_path), 'logs')
-    os.makedirs(log_dir, exist_ok=True)
-    
-    file_handlers = {
-        'debug': RotatingFileHandler(os.path.join(log_dir, 'debug.log'), maxBytes=10485760, backupCount=5),
-        'info': RotatingFileHandler(os.path.join(log_dir, 'info.log'), maxBytes=10485760, backupCount=5),
-        'error': RotatingFileHandler(os.path.join(log_dir, 'error.log'), maxBytes=10485760, backupCount=5)
-    }
-    
-    for handler in file_handlers.values():
-        handler.setFormatter(formatter)
-    
-    file_handlers['debug'].setLevel(logging.DEBUG)
-    file_handlers['info'].setLevel(logging.INFO)
-    file_handlers['error'].setLevel(logging.ERROR)
-    
-    # Configure root logger
-    root_logger = logging.getLogger()
-    root_logger.setLevel(log_level)
-    
-    # Remove any existing handlers to avoid duplicates
-    root_logger.handlers = []
-    
-    # Add all handlers
-    root_logger.addHandler(console_handler)
-    for handler in file_handlers.values():
-        root_logger.addHandler(handler)
-    
-    # Log startup information
-    app.logger.info('Current environment: %s', env)
-    app.logger.info('Debug mode: %s', debug_mode)
-    app.logger.info('Log level: %s', logging.getLevelName(log_level))
+    # Log initial configuration
+    app.logger.info(f"Current environment: {env}")
+    app.logger.info(f"Debug mode: {debug_mode}")
+    app.logger.info(f"Log level: {app.config['LOG_LEVEL']}")
     
     # Context processor for templates
     @app.context_processor
