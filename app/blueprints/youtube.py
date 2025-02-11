@@ -124,31 +124,6 @@ def get_videos():
                 'url': 'https://youtu.be/K_ND3X8UmAg',
                 'title': 'WINDSURF - Making a FLASK APP EASY!!! STARTING TO ACTUALLY BUILD!!! (VIDEO 14)',
                 'description': '''In this video, I start building the resume endpoint and make another Git commit. To help Cassi (Codeium AI) understand the structure of my resume, I used all caps for section headers.'''
-            },
-            {
-                'url': 'https://youtu.be/3zQvQ7ZzQ8k',
-                'title': 'WINDSURF - Making a FLASK APP EASY!!! - Resume Endpoint Setup (VIDEO 15)',
-                'description': '''In this video, I set up the resume endpoint and make sure it's working correctly. I also go over how to handle errors and exceptions in the code, making sure the app remains stable even when things don't go as planned.'''
-            },
-            {
-                'url': 'https://youtu.be/3zQvQ7ZzQ8k',
-                'title': 'WINDSURF - Making a FLASK APP EASY!!! - Resume Endpoint Setup (VIDEO 16)',
-                'description': '''In this video, I set up the resume endpoint and make sure it's working correctly. I also go over how to handle errors and exceptions in the code, making sure the app remains stable even when things don't go as planned.'''
-            },
-            {
-                'url': 'https://youtu.be/3zQvQ7ZzQ8k',
-                'title': 'WINDSURF - Making a FLASK APP EASY!!! - Resume Endpoint Setup (VIDEO 17)',
-                'description': '''In this video, I set up the resume endpoint and make sure it's working correctly. I also go over how to handle errors and exceptions in the code, making sure the app remains stable even when things don't go as planned.'''
-            },
-            {
-                'url': 'https://youtu.be/3zQvQ7ZzQ8k',
-                'title': 'WINDSURF - Making a FLASK APP EASY!!! - Resume Endpoint Setup (VIDEO 18)',
-                'description': '''In this video, I set up the resume endpoint and make sure it's working correctly. I also go over how to handle errors and exceptions in the code, making sure the app remains stable even when things don't go as planned.'''
-            },
-            {
-                'url': 'https://youtu.be/3zQvQ7ZzQ8k',
-                'title': 'WINDSURF - Making a FLASK APP EASY!!! - Resume Endpoint Setup (VIDEO 19)',
-                'description': '''In this video, I set up the resume endpoint and make sure it's working correctly. I also go over how to handle errors and exceptions in the code, making sure the app remains stable even when things don't go as planned.'''
             }
         ]
 
