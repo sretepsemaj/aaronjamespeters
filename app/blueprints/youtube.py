@@ -37,10 +37,10 @@ def get_best_thumbnail(video_id):
         try:
             response = requests.head(url)
             if response.status_code == 200:
-                logger.info(f"Found working thumbnail at quality: {quality}")
+                logger.debug(f"Found working thumbnail at quality: {quality}")
                 return url
         except Exception as e:
-            logger.warning(f"Error checking thumbnail {quality}: {str(e)}")
+            logger.debug(f"Error checking thumbnail at quality {quality}: {str(e)}")
             continue
     
     # If no thumbnails work, return the most reliable one
@@ -103,24 +103,13 @@ Since .env.production needs a secure token (secrets.token_hex(32)), I created a 
         for video_data in videos_data:
             try:
                 video_id = extract_video_id(video_data['url'])
-                logger.info(f"Processing video ID: {video_id}")
+                logger.debug(f"Processing video ID: {video_id}")
                 
                 # Get the best available thumbnail
                 thumbnail_url = get_best_thumbnail(video_id)
-                logger.info(f"Using thumbnail URL: {thumbnail_url}")
+                logger.debug(f"Using thumbnail URL: {thumbnail_url}")
                 
-                # Create YouTube object with both URL formats to try both
-                yt = None
-                try:
-                    yt = YouTube(video_data['url'])
-                except Exception as e:
-                    logger.warning(f"Failed with full URL, trying with video ID: {str(e)}")
-                    try:
-                        yt = YouTube(f"https://youtu.be/{video_id}")
-                    except Exception as e2:
-                        logger.error(f"Failed with both URL formats: {str(e2)}")
-                        yt = None
-                
+                # Start with our reliable hardcoded data
                 video_info = {
                     'video_id': video_id,
                     'title': video_data['title'],
@@ -128,19 +117,25 @@ Since .env.production needs a secure token (secrets.token_hex(32)), I created a 
                     'thumbnail_url': thumbnail_url
                 }
                 
-                # Add additional info if YouTube object is available
-                if yt:
-                    video_info.update({
-                        'title': yt.title or video_data['title'],
-                        'description': yt.description or video_data['description'],
-                        'view_count': yt.views,
-                        'publish_date': yt.publish_date.isoformat() if yt.publish_date else None,
-                        'length': yt.length,
-                        'author': yt.author
-                    })
+                # Try to enhance with YouTube data, but don't let failures affect our basic functionality
+                try:
+                    yt = YouTube(f"https://youtube.com/watch?v={video_id}")
+                    # Only update fields if we successfully get them
+                    if hasattr(yt, 'views') and yt.views is not None:
+                        video_info['view_count'] = yt.views
+                    if hasattr(yt, 'publish_date') and yt.publish_date is not None:
+                        video_info['publish_date'] = yt.publish_date.isoformat()
+                    if hasattr(yt, 'length') and yt.length is not None:
+                        video_info['length'] = yt.length
+                    if hasattr(yt, 'author') and yt.author is not None:
+                        video_info['author'] = yt.author
+                    logger.debug(f"Successfully fetched additional YouTube data for {video_id}")
+                except Exception as e:
+                    logger.debug(f"Could not fetch additional YouTube data for {video_id}: {str(e)}")
+                    # Continue with basic info only
                 
                 videos.append(video_info)
-                logger.info(f"Successfully processed video: {video_id}")
+                logger.debug(f"Successfully processed video: {video_id}")
                 
             except Exception as e:
                 logger.error(f"Error processing video {video_data['url']}: {str(e)}")
