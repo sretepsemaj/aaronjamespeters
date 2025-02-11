@@ -7,19 +7,19 @@
             <h1 class="main-title">Welcome to Aaron James Peters</h1>
             <h2 class="subtitle mb-4">Profile App</h2>
             <div class="nav-buttons d-flex flex-column align-items-center">
-                <a href="{{ url_for('bio.index') }}" class="btn btn-primary nav-button mb-3 w-100">
+                <a href="{{ url_for('bio.index') }}" class="btn btn-primary nav-button mb-3">
                     <i class="fas fa-user me-2"></i>
                     <span>Bio</span>
                 </a>
-                <a href="{{ url_for('resume.index') }}" class="btn btn-primary nav-button mb-3 w-100">
+                <a href="{{ url_for('resume.index') }}" class="btn btn-primary nav-button mb-3">
                     <i class="fas fa-file-alt me-2"></i>
                     <span>Resume</span>
                 </a>
-                <a href="{{ url_for('projects.index') }}" class="btn btn-primary nav-button mb-3 w-100">
+                <a href="{{ url_for('projects.index') }}" class="btn btn-primary nav-button mb-3">
                     <i class="fas fa-code me-2"></i>
                     <span>Projects</span>
                 </a>
-                <a href="{{ url_for('youtube.index') }}" class="btn btn-primary nav-button mb-3 w-100">
+                <a href="{{ url_for('youtube.index') }}" class="btn btn-primary nav-button mb-3">
                     <i class="fab fa-youtube me-2"></i>
                     <span>YouTube</span>
                 </a>
@@ -64,17 +64,17 @@
 
 /* Navigation Buttons */
 .nav-buttons {
-    max-width: 300px;
     margin: 0 auto;
 }
 
 .nav-button {
-    display: flex !important;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    padding: 1rem !important;
+    padding: 0.75rem 2rem !important;
     font-size: 1.1rem;
     transition: transform 0.2s, box-shadow 0.2s;
+    min-width: 160px;
 }
 
 .nav-button:hover {
@@ -102,8 +102,9 @@
     }
 
     .nav-button {
-        padding: 0.875rem !important;
+        padding: 0.75rem 1.5rem !important;
         font-size: 1rem;
+        min-width: 140px;
     }
 }
 </style>
