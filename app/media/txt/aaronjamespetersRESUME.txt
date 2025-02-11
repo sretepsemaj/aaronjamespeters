@@ -6,7 +6,7 @@ Email: sretepsemaj.1@gmail.com | Phone: 838-202-2917 | LinkedIn: @sretepsemaj
 
 PROFESSIONAL SUMMARY
 
-I'm a highly self-motivated programmer who works well in collaborative team environments and I am passionate about creating scalable, user-centric solutions that drive business growth. I have been doing projects in Full-Stack environments, building dynamic web applications and implementing AI-driven web application functionalities. Im Proficient in Python frameworks (Flask, Django) and JavaScript, I'm learning a basic foundation in Java and object-oriented programming. I have had some success in deploying applications on AWS and Render platforms and fairly adept at database management, cloud infrastructure, and AI code editing system. Would welcome any opportunity to grow my knowledge and build systems that impact our future for the positive.
+I'm a highly self-motivated programmer who works well in collaborative team environments and I am passionate about creating scalable, user-centric solutions that drive business growth. I have been doing projects in Full-Stack environments, building dynamic web applications and implementing AI-driven web application functionalities. I'm proficient in Python frameworks (Flask, Django) and JavaScript, I'm learning a basic foundation in Java and object-oriented programming. I have had some success in deploying applications on AWS and Render platforms and fairly adept at database management, cloud infrastructure, and AI code editing system. Would welcome any opportunity to grow my knowledge and build systems that impact our future for the positive.
 
 TECHNICAL SKILLS
 
