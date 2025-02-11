@@ -1,11 +1,16 @@
 {% extends "base.html" %}
 
+{% block head %}
+<link href="{{ url_for('static', filename='css/home.css') }}" rel="stylesheet">
+{% endblock %}
+
 {% block content %}
 <div class="hero-section">
     <div class="container text-center py-4">
         <div class="welcome-card" data-aos="fade-up">
-            <h1 class="main-title">Welcome to Aaron James Peters</h1>
-            <h2 class="subtitle mb-4">Profile App</h2>
+            <h1 class="welcome-text">Welcome to</h1>
+            <h2 class="name-text">Aaron James Peters</h2>
+            <h3 class="subtitle mb-4">Profile App</h3>
             <div class="nav-buttons d-flex flex-column align-items-center">
                 <a href="{{ url_for('bio.index') }}" class="btn btn-primary nav-button mb-3">
                     <i class="fas fa-user me-2"></i>
@@ -27,85 +32,4 @@
         </div>
     </div>
 </div>
-{% endblock %}
-
-{% block styles %}
-<style>
-/* Hero Section */
-.hero-section {
-    min-height: calc(100vh - var(--navbar-height));
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    display: flex;
-    align-items: center;
-    padding: 2rem 0;
-}
-
-.welcome-card {
-    background: white;
-    padding: 4rem 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.main-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 0.5rem;
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    color: #666;
-    font-weight: 400;
-}
-
-/* Navigation Buttons */
-.nav-buttons {
-    margin: 0 auto;
-}
-
-.nav-button {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    padding: 0.75rem 2rem !important;
-    font-size: 1.1rem;
-    transition: transform 0.2s, box-shadow 0.2s;
-    min-width: 160px;
-}
-
-.nav-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-}
-
-.nav-button i {
-    font-size: 1.2rem;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-    .welcome-card {
-        padding: 2rem 1rem;
-        margin: 1rem;
-    }
-
-    .main-title {
-        font-size: 2rem;
-    }
-
-    .subtitle {
-        font-size: 1.25rem;
-    }
-
-    .nav-button {
-        padding: 0.75rem 1.5rem !important;
-        font-size: 1rem;
-        min-width: 140px;
-    }
-}
-</style>
 {% endblock %}
