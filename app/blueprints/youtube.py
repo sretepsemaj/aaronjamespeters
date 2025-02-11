@@ -93,8 +93,62 @@ def get_videos():
             {
                 'url': 'https://youtu.be/059nc8wiXaw',
                 'title': 'WINDSURF - Making a FLASK APP EASY!!! - Explainer of off Camera Logging Setup (VIDEO 8)',
-                'description': '''In this video, I recap all the off-camera debugging and setup required to get the logging flow working properly. I couldn't show every step, but the key challenge was configuring the .env file to work seamlessly with .env.development and .env.production. These files connect through base.py in the config folder to ensure the right logging settings are applied from dev.py for development and prod.py for production.
-Since .env.production needs a secure token (secrets.token_hex(32)), I created a .env.production.template file to show the structure without exposing sensitive info. When deploying to Render, I'll generate the token and copy it into the actual .env.production file.'''
+                'description': '''In this video, I recap all the off-camera debugging and setup required to get the logging flow working properly. I couldn't show every step, but the key challenge was configuring the .env file to work seamlessly with .env.development and .env.production. These files connect through base.py in the config folder to ensure the right logging settings are applied from dev.py for development and prod.py for production. Since .env.production needs a secure token (secrets.token_hex(32)), I created a .env.production.template file to show the structure without exposing sensitive info. When deploying to Render, I'll generate the token and copy it into the actual .env.production file.'''
+            },
+            {
+                'url': 'https://youtu.be/-bT9eOCnZMU',
+                'title': 'WINDSURF - Making a FLASK APP EASY!!! - Git commit & Merge code back to main repo (VIDEO 9)',
+                'description': '''In this video, I waited way too long to initialize Git, so it's time to fix that. I set up Git, make a dev commit, and since I didn't add a .gitignore or .gitkeep earlier, things got a little messy. Most of the video is me coaching back and forth to handle the merge and get everything from dev merged cleanly back into the main branch. Lesson learned—always set up Git and .gitignore early!'''
+            },
+            {
+                'url': 'https://youtu.be/WAwTQDMVD7U',
+                'title': 'WINDSURF - Making a FLASK APP EASY!!! - Add the Projects and YouTube buttons to home (VIDEO 10)',
+                'description': '''In this video, I add Projects and YouTube buttons to the app to better showcase my skills. I decided to use Flask Blueprints to keep things professional. While I could've stuck with a single routes.py, breaking the logic into separate files using Blueprints makes the code much easier to navigate. It also simplifies debugging and updating the relationships between templates and endpoints. Definitely worth the extra effort!'''
+            },
+            {
+                'url': 'https://youtu.be/P_MGzQJflQk',
+                'title': 'WINDSURF - Making a FLASK APP EASY!!! Quick git commit & MAJOR HOME PAGE BUTTONS DEBUG (VIDEO 11)',
+                'description': '''In this video, I do a quick commit and set up the Blueprint folder. Although I didn't get the app fully working at first, I realized off-camera that each Blueprint needs its own folder in the templates directory. Since it's my first time using Blueprints for script communication, there was definitely a learning curve. Thankfully, with the help of WINDSURF editor and Cassi (Codeium AI), we worked through it together. I'll explain how it all comes together in the next video!'''
+            },
+            {
+                'url': 'https://youtu.be/m8ZRPhrVzy8',
+                'title': 'WINDSURF - Making a FLASK APP EASY!!! Final Home Buttons FIX (VIDEO 12)',
+                'description': '''In this video, I troubleshoot the templates folder setup. I had to create a separate folder for each Blueprint in the templates directory to render individual index.html files. This ensures that each endpoint has its own dedicated page, keeping everything organized and working as expected.'''
+            },
+            {
+                'url': 'https://youtu.be/8vKqv_uPbEY',
+                'title': 'WINDSURF - Making a FLASK APP EASY!!! Git commit & Logs BROKE had to debug them (VIDEO 13)',
+                'description': '''In this video, I do a quick Git commit and then notice my logs have stopped working. Logs are essential—especially when using an AI code editor like WINDSURF or any other tool. While you can rely on the terminal in local development, once the app is deployed, there's no terminal access. Having info.log and error.log functioning correctly is crucial for tracking issues. It took some time to fix, but I made sure the terminal now displays the current environment so I don't accidentally work in the wrong one.'''
+            },
+            {
+                'url': 'https://youtu.be/K_ND3X8UmAg',
+                'title': 'WINDSURF - Making a FLASK APP EASY!!! STARTING TO ACTUALLY BUILD!!! (VIDEO 14)',
+                'description': '''In this video, I start building the resume endpoint and make another Git commit. To help Cassi (Codeium AI) understand the structure of my resume, I used all caps for section headers.'''
+            },
+            {
+                'url': 'https://youtu.be/3zQvQ7ZzQ8k',
+                'title': 'WINDSURF - Making a FLASK APP EASY!!! - Resume Endpoint Setup (VIDEO 15)',
+                'description': '''In this video, I set up the resume endpoint and make sure it's working correctly. I also go over how to handle errors and exceptions in the code, making sure the app remains stable even when things don't go as planned.'''
+            },
+            {
+                'url': 'https://youtu.be/3zQvQ7ZzQ8k',
+                'title': 'WINDSURF - Making a FLASK APP EASY!!! - Resume Endpoint Setup (VIDEO 16)',
+                'description': '''In this video, I set up the resume endpoint and make sure it's working correctly. I also go over how to handle errors and exceptions in the code, making sure the app remains stable even when things don't go as planned.'''
+            },
+            {
+                'url': 'https://youtu.be/3zQvQ7ZzQ8k',
+                'title': 'WINDSURF - Making a FLASK APP EASY!!! - Resume Endpoint Setup (VIDEO 17)',
+                'description': '''In this video, I set up the resume endpoint and make sure it's working correctly. I also go over how to handle errors and exceptions in the code, making sure the app remains stable even when things don't go as planned.'''
+            },
+            {
+                'url': 'https://youtu.be/3zQvQ7ZzQ8k',
+                'title': 'WINDSURF - Making a FLASK APP EASY!!! - Resume Endpoint Setup (VIDEO 18)',
+                'description': '''In this video, I set up the resume endpoint and make sure it's working correctly. I also go over how to handle errors and exceptions in the code, making sure the app remains stable even when things don't go as planned.'''
+            },
+            {
+                'url': 'https://youtu.be/3zQvQ7ZzQ8k',
+                'title': 'WINDSURF - Making a FLASK APP EASY!!! - Resume Endpoint Setup (VIDEO 19)',
+                'description': '''In this video, I set up the resume endpoint and make sure it's working correctly. I also go over how to handle errors and exceptions in the code, making sure the app remains stable even when things don't go as planned.'''
             }
         ]
 
