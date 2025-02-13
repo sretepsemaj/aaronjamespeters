@@ -2,50 +2,64 @@ WINDSURF 01 - Making a FLASK APP EASY!!! -  Initial Folder Structure and SETUP
 
 https://youtu.be/9Isksd9Xhqc
 
-Doing the first initial folder structure explanation and how to set up an easy PYTHON Flask app with WINDSURF code editor and codium AI or as I like to call it Cassi. This video starts the project of me setting up a work application demo page that I will use to apply to jobs. This is a series of videos where you can follow along to make your own app I'm going to demonstrate all the important things to consider when building a PYTHON Flask app.
+Introduction: By the end of this video, you'll have a resume site that looks like this aaronjamespeters.onrender.com or you can change it, the code is also in my GitHub, if youd like to just use that. This is a complete build, covering almost every step of problem-solving and debugging. Some of the more time-consuming debugging was shortened for the sake of the video, but I always explain how I fixed the issues. This is my first video series—there are more builds to come, and as I get better at making these, I hope you'll be able to build some awesome projects, too.
+
+In this first video, I go over the folder structure that I pre-made with OpenAI. For this simple app—or any app—it's really helpful to predesign the folders and basic scripts you'll need to render everything in the browser. Laying that foundation makes things much easier down the line. AI tools can generate scripts, but when those scripts are linked to others, there's always a chance it will accidentally break features you've already set up. While anything can be fixed if you ask the right questions (Best practices usually), you can easily get stuck in loops and waste tokens. For the planet's sake, it's best to avoid that whenever possible.
+
+I'm not here to show half the process and pretend it works—I'm giving you the full picture. This video starts with an explanation of the initial folder structure and how to set up a basic Python Flask app using WINDSURF, Cascade (the AI platform and my name for the AI Cassi), Codeium (the AI assistant), and WINDSURF (the code editor). This series of videos will walk you through building a work application demo page that I'm using to apply for jobs. Follow along, and I'll show you everything you need to know about setting up your own Python Flask app—from key considerations to all the essential steps.
+
+This is about reclaiming tech, redistributing power, and showing how much better life can be without everything locked up in the hands of the 1%. There's an abundance of resources—we just don't distribute them fairly. The hoarders of wealth and power seem content to let the rest of us suffer under their greed. But really, how much does one person need to be truly happy? Isn't a good life about having great family and friends by your side?
+
+As I get better at this, I'll move on to more complex projects—some of which I've already built but plan to rebuild. I haven't been coding for long, but the learning curve I've experienced with AI code editing tools like WINDSURF has been unparalleled. I already have two projects in mind, both built with Django. Stay tuned!
+
+My name is Aaron James Peters and thank you for watching.
 
 WINDSURF 02 - Making a FLASK APP EASY!!! - Finishing folder structure
 
-https://youtu.be/Z1PDkh7eLss
+https://youtu.be/o9kdfk1Q-L0
 
-In this video, I demonstrate how WINDSURF editor and Codeium AI collaborate to generate a portion of the folder structure for a Flask app. Since Codeium can't generate the entire Flask application in one go, I walk you through what it successfully generated, how far it got, and how much more is required for the app to run locally in the browser. This highlights the gaps and the additional steps needed to complete the setup.
+In this video, I demonstrate how WINDSURF editor and Codeium AI collaborate to generate a portion of the folder structure for a Flask app. Since Codeium can't generate the entire Flask application in one go, I walk you through what it successfully generated, how far it got, and how much more is required for the app to run locally in the browser. This highlights the gaps and the additional steps needed to complete the setup. I completely forget to run the commands and wonder why it's not running. NUBE Lol!
 
 WINDSURF 03 - Making a FLASK APP EASY!!! - Setting up the .venv folder
 
-https://youtu.be/h3t_fyDctRI
+https://youtu.be/eFMfZ0CFbKM
 
-In this video, I set up the .venv folder and ensure all dependencies are installed. I run into a few issues that require troubleshooting before successfully launching it in the browser in the next video. One key tip: when working in local development, avoid using HTTPS—it can clutter your terminal output and make it difficult to read.
+In this video, I set up the .venv folder and ensure all dependencies are installed. I run into a few issues that require troubleshooting before totally forgetting to run the commands for the app to start wondering what happened, definitely a nube just like in the last video. Lol In the next video we get it started, though. One key tip: when working in local development, avoid using HTTPS—it can clutter your terminal output and make it difficult to read.
 
 WINDSURF 04 - Making a FLASK APP EASY!!! - Troubleshooting/Debugging
 
-https://youtu.be/XzVfzhoh4ZM
+https://youtu.be/eqmBMIs2y8E
 
-In this video, watch me coach Cassi (Codeium AI) as it tries to render the initial setup of the Flask app. It’s a bit of a struggle, and I make a few simple mistakes along the way, but in the end, I get the app up and running. A reminder that coding is all about persistence and learning from those small errors!
+BY THE END I'M RUNNING IN LOCAL DEV. IT BEEN MAYBE 30-45 MIN TOPS. This would take a team a whole week.
+In this video, watch me coach Cody (Codeium AI) as it tries to render the initial setup of the Flask app. It’s a bit of a struggle, and I make a few simple mistakes along the way, but in the end, I get the app up and running. A reminder that coding is all about persistence and learning from those small errors!
 
 WINDSURF 05 - Making a FLASK APP EASY!!! - FORGOT!!! git init
 
-https://youtu.be/-dz2aCUmSCU
+https://youtu.be/gAnmIrpZmkA
 
 In this video, I initialize Git and start tracking the project folder—something I really should have done from the start! Luckily, with WINDSURF editor and Codeium AI, getting everything set up correctly was quick and easy. I also create a dev branch and begin working from there, following best practices for development.
 
 WINDSURF 06 - Making a FLASK APP EASY!!! - Different Logging Levels w/ quick chat
 
-https://youtu.be/AmKMk8QW2x4
+https://youtu.be/3WHWDnJM6FI
 
 In this video, I walk through setting up logging for both development and production using WINDSURF editor chat. The goal is to configure logging so development has detailed local debugging, while production only tracks error and info logs. This setup makes it much easier to debug locally and monitor server-side activity. It also helps identify any unusual behavior from users, keeping the app secure and running smoothly.
 
 WINDSURF 07 - Making a FLASK APP EASY!!! - DEBUG-.env creation & more DEBUGGING
 
-https://youtu.be/zD2ilvrNGKc
+https://youtu.be/2aAKnZ_dET4
 
 In this video, I run into some challenges setting up proper logging. I create the essential .env file, but I struggle to get the logging configuration to work seamlessly between the .env, base.py, and its dependent configuration files—dev.py for local development and prod.py for deployment. I also go over how I set up the .env file to manage the environment for each configuration, ensuring that dev.py is used for local development and prod.py is ready for deployment. It’s a great reminder that fine-tuning these configurations takes time but is crucial for a smooth development workflow.
 
 WINDSURF 08 - Making a FLASK APP EASY!!! - Explainer of off Camera Logging Setup
 
-https://youtu.be/059nc8wiXaw
+https://youtu.be/BoZsNXwjxKo
 
-In this video, I recap all the off-camera debugging and setup required to get the logging flow working properly. I couldn’t show every step, but the key challenge was configuring the .env file to work seamlessly with .env.development and .env.production. These files connect through base.py in the config folder to ensure the right logging settings are applied from dev.py for development and prod.py for production.
-Since .env.production needs a secure token (secrets.token_hex(32)), I created a .env.production.template file to show the structure without exposing sensitive info. When deploying to Render, I’ll generate the token and copy it into the actual .env.production file.
+In this video, I recap all the off-camera debugging and setup required to get the logging flow working properly. I couldn’t show every step, but the key challenge was configuring the .env file to work seamlessly with .env.development and .env.production. These files connect through base.py in the config folder to ensure the right logging settings are applied from dev.py for development and prod.py for production. Since .env.production needs a secure token (secrets.token_hex(32)), I created a .env.production.template file to show the structure without exposing sensitive info. When deploying to Render, I’ll generate the token and copy it into the actual .env.production file. DISCLAIMER: made this a little more complicated than it needs to be, best thing is to work in local development and you can check production is working with the variables in the .env file even though I separated the .env.production .env.developemnt, although you can just upload the .env production variables later. For something this simple it not required. You couuld just do a simple set up in the .env.
+
+
+
+
 
 WINDSURF 09 - Making a FLASK APP EASY!!! - Git commit & Merge code back to main repo
 

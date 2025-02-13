@@ -46,8 +46,9 @@ app/media/aaronYOUTUBE/
 
 # Environment variables
 .env
-.env.*
 !.env.*.template
+.env.production
+.env.development
 
 # Flask
 instance/
